@@ -19,63 +19,6 @@ class DefaultFirebaseOptions {
     if (kIsWeb) {
       return web;
     }
-    switch (defaultTargetPlatform) {
-      case TargetPlatform.android:
-        return android;
-      case TargetPlatform.iOS:
-        return ios;
-      case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
-      case TargetPlatform.windows:
-        return windows;
-      case TargetPlatform.linux:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
-      default:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions are not supported for this platform.',
-        );
-    }
-  }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAay7koYk-iLLAk-Ws9OikKgrv1t4LSWIc',
-    appId: '1:1093837145126:web:4889e63861ecd6522952e7',
-    messagingSenderId: '1093837145126',
-    projectId: 'auth-app-606e7',
-    authDomain: 'auth-app-606e7.firebaseapp.com',
-    storageBucket: 'auth-app-606e7.firebasestorage.app',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCPuMHrjKX8KGcD8weZxIe6CwS-fWzwjBo',
-    appId: '1:1093837145126:android:dde469c3638992402952e7',
-    messagingSenderId: '1093837145126',
-    projectId: 'auth-app-606e7',
-    storageBucket: 'auth-app-606e7.firebasestorage.app',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAay7koYk-iLLAk-Ws9OikKgrv1t4LSWIc',
-    appId: '1:1093837145126:web:5eae39db1d4061c42952e7',
-    messagingSenderId: '1093837145126',
-    projectId: 'auth-app-606e7',
-    authDomain: 'auth-app-606e7.firebaseapp.com',
-    storageBucket: 'auth-app-606e7.firebasestorage.app',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAGjXrpLx24Owbj1ITU0oAV8eR2uj_CQeA',
-    appId: '1:1093837145126:ios:fe66ef40da3355262952e7',
-    messagingSenderId: '1093837145126',
-    projectId: 'auth-app-606e7',
-    storageBucket: 'auth-app-606e7.firebasestorage.app',
-    iosBundleId: 'com.example.authapp',
-  );
 
 }
